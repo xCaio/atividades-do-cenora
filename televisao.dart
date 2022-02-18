@@ -1,25 +1,30 @@
-void main(){
-  Televisao televisao = Televisao(false, 2, 3);
-  
-  print(televisao.status);
-  print(televisao.canal);
-  print(televisao.volume);
-}
-class Televisao{
-  bool? status;
-  int? canal;
-  int? volume;
 
-  Televisao(this.status, this.canal, this.volume);
-  LigaDesliga(bool? ligar){
+class Televisao{
+  bool status = true;
+  int canal= 0;
+  int volume = 0;
+
+  //metodo
+  Televisao(){
+    this.status=false;
   }
-  AumentaCanal(int aumentar){
-    aumentar++;
+
+  void LigaDesliga(){
+    if(!this.status){
+      this.status = true;
+      this.canal =3;
+      this.volume=10;
+    }else{
+      this.status=!this.status;
+    }
   }
-  MostaCanal(int canal){
-    canal = canal;
+
+  void AumentaCanal(){
+    Televisao();
+    canal++;
   }
-  MostaVolume(int volume){
-    volume = volume;
+
+  MostraCanal(){
+    return this.canal;
   }
 }
