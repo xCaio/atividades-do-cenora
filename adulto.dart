@@ -1,12 +1,17 @@
 import 'dart:ffi';
 
 void main(){
+  Adulto adulto = Adulto();
+  print("O peso inicial do Adulto é");
+  print(adulto.peso);
 
-  Adulto adulto = Adulto(2,2,2,2);
-  adulto.peso = 2.0;
-  adulto.engordar = 5.0;
-  adulto.emagrecer = 9.0;
-  adulto.quilos = 60.0;
+  print("ENGORDANDO...");
+
+  adulto.Engordar(9);
+  print(adulto.peso);
+
+  adulto.Emagrecer(5);
+  print(adulto.peso);
 }
 
 class Adulto{
