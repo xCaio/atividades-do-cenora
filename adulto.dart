@@ -10,18 +10,16 @@ void main(){
 }
 
 class Adulto{
-  double? peso;
-  double? engordar;
-  double? emagrecer;
-  double? quilos;
-  
-  Adulto(this.peso, this.engordar, this.emagrecer, this.quilos);
+  double peso = 60;
+  double quilos = 0;
 
-  Adulto.engordar(double quilos){
-    quilos++;    
+  void Engordar(double quilos){
+    this.quilos++;
+    peso+=quilos;
   }
-  Adulto.emagrecer(double quilos){
-    quilos--;    
+
+  void Emagrecer(double quilos){
+    peso-=quilos;
   }
 
 }
