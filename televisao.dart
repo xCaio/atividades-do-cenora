@@ -1,30 +1,33 @@
+void main(){
+
+  Televisao televisao = Televisao();
+  televisao.LigaDesliga();
+  
+  print(televisao.status);
+  print(televisao.canal);
+  print(televisao.volume);
+  
+}
 
 class Televisao{
-  bool status = true;
-  int canal= 0;
-  int volume = 0;
+  bool? status;
+  int? canal;
+  int? volume;
 
-  //metodo
   Televisao(){
     this.status=false;
   }
 
   void LigaDesliga(){
-    if(!this.status){
+    if(this.status == false){
       this.status = true;
       this.canal =3;
       this.volume=10;
+      print("LIGADA");
+
     }else{
-      this.status=!this.status;
+      this.status=false;
+      print("DESLIGADA");
     }
-  }
-
-  void AumentaCanal(){
-    Televisao();
-    canal++;
-  }
-
-  MostraCanal(){
-    return this.canal;
   }
 }
