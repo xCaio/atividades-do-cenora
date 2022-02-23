@@ -8,9 +8,8 @@ class Senha{
   String valor = 'senhaGrande';
 
   valorDaSenha(String valor){
-  this.valor = valor.toString();
-  return valor;
-}
+    this.valor = valor.toString();
+  }
 
 bool isValid(){
   if(valor.length > 8){
@@ -20,4 +19,3 @@ bool isValid(){
   }
 }
 }
-
